@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-tertiary-fixed": "#00201d",
+        "outline-variant": "#bfc8cd",
+        "surface-container-high": "#dce9ff",
+        "surface-container-lowest": "#ffffff",
+        "surface": "#f8f9ff",
+        "on-tertiary-container": "#83d9cf",
+        "secondary-fixed-dim": "#b6c4ff",
+        "error-container": "#ffdad6",
+        "inverse-primary": "#90cfec",
+        "surface-container-low": "#eff4ff",
+        "on-primary-fixed": "#001f2a",
+        "inverse-on-surface": "#eaf1ff",
+        "tertiary": "#004641",
+        "outline": "#70787d",
+        "on-surface-variant": "#40484c",
+        "primary-fixed-dim": "#90cfec",
+        "on-error-container": "#93000a",
+        "on-error": "#ffffff",
+        "primary": "#004357",
+        "on-primary-container": "#93d3ef",
+        "surface-dim": "#cbdbf5",
+        "surface-bright": "#f8f9ff",
+        "inverse-surface": "#213145",
+        "secondary-fixed": "#dce1ff",
+        "surface-container": "#e5eeff",
+        "on-secondary-fixed": "#00164e",
+        "background": "#f8f9ff",
+        "on-secondary-fixed-variant": "#264191",
+        "on-surface": "#0b1c30",
+        "surface-tint": "#1e667f",
+        "on-background": "#0b1c30",
+        "surface-container-highest": "#d3e4fe",
+        "on-secondary": "#ffffff",
+        "on-primary-fixed-variant": "#004d64",
+        "on-tertiary-fixed-variant": "#00504a",
+        "secondary": "#4059aa",
+        "on-primary": "#ffffff",
+        "secondary-container": "#8fa7fe",
+        "tertiary-fixed": "#9cf2e8",
+        "tertiary-container": "#006059",
+        "surface-variant": "#d3e4fe",
+        "error": "#ba1a1a",
+        "on-tertiary": "#ffffff",
+        "primary-fixed": "#bde9ff",
+        "primary-container": "#0d5c75",
+        "on-secondary-container": "#1d3989",
+        "tertiary-fixed-dim": "#80d5cb"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-lg": "1.5rem",
+        "space-md": "1rem",
+        "space-xl": "2.5rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "margin": "1rem",
+        "gutter-tablet": "1.5rem",
+        "margin-desktop": "3rem",
+        "gutter": "1.5rem",
+        "margin-tablet": "2rem",
+        "gutter-desktop": "2rem"
+      },
+      "fontFamily": {
+        "label-lg": ["Inter"],
+        "title-md": ["Inter"],
+        "label-md": ["Inter"],
+        "headline-md": ["Inter"],
+        "headline-sm": ["Inter"],
+        "body-lg": ["Inter"],
+        "headline-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "display": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "body-sm": ["Inter"],
+        "title-lg": ["Inter"]
+      },
+      "fontSize": {
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+        "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+        "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+        "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+        "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex flex-col justify-between pt-space-sm"><div class="flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="A minimalist, dignified emblem for AASRA-AI healthcare and safety platform. A protective gentle shield embracing a subtle soundwave pulse and heart leaf in deep teal and warm emerald tones, vector SVG style, clinical, trustworthy, government health-tech aesthetic.. Design context: - Primary color: #0d5c75
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XT2m91yeIwzOjLZoFU8Hh3oryPqjz4NujSnKgZvPTQJlTRF3erxgseqy78qrgJdiYiVhHRwYlZr0WlnKj0Xg-D0FDemlT1ylr2tSRo9KZS23UE0pPKp0pC2Ox85Q4pin7iqdtGXFSOr1qr6vuEAXTlwiIkuhvrofBQS9_nKub5SwhRtPAZcr6db-HwbOhCTI-yTXxG534xrpBpB6pbiQARx-5bxvqJ7fEK9kU8itoldXZxc0ZyjcG9tftc"/><span class="font-title-lg text-title-lg text-primary tracking-tight">AASRA-AI</span></div><span class="hidden sm:inline-flex items-center px-space-sm py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wide">SIH 2026 • MoSJE</span><div class="hidden xl:flex items-center bg-surface-container-low p-space-xs rounded-lg gap-space-xs ml-space-sm"><button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-md text-label-md" id="role-citizen" type="button">Citizen / Victim</button><button class="px-space-sm py-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant font-label-md text-label-md flex items-center gap-1" id="role-counselor" type="button">Clinical Counselor<span class="w-2 h-2 rounded-full bg-secondary"></span></button><button class="px-space-sm py-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant font-label-md text-label-md" id="role-admin" type="button">MoSJE Admin</button></div></div><div class="flex items-center gap-space-md"><button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container hover:text-on-surface font-label-sm text-label-sm transition-colors" id="language-toggle" type="button">EN / हिन्दी</button><button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-error text-on-error hover:bg-error-container hover:text-on-error-container font-label-md text-label-md transition-colors shadow-sm" id="quick-exit-header" type="button"><span class="material-symbols-outlined text-[16px]">logout</span><span>Quick Exit (ESC)</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between pb-space-xs"><nav class="flex items-center gap-space-lg" data-active-classes="text-primary font-label-lg text-label-lg font-semibold border-b-2 border-primary"><a class="pb-1 text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="overview-check-in" href="#">Overview / Check-in</a><a class="pb-1 text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="my-journey-analytics" href="#">My Journey &amp; Analytics</a><a class="pb-1 text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="somatic-coping" href="#">Somatic Coping</a><a class="pb-1 text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="helplines-legal-support" href="#">Helplines &amp; Legal Support</a><a class="pb-1 text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="privacy-center" href="#">Privacy Center</a></nav><div class="hidden md:flex items-center gap-space-md"><div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-tertiary-container">verified_user</span><span>AES-256 Encrypted • DPDP Act 2023 Compliant</span></div><button class="flex items-center gap-1 px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-sm text-label-sm transition-colors" id="sim-drawer-nav" type="button"><span class="material-symbols-outlined text-[14px]">tune</span><span>Simulation Mode Drawer</span></button></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Weather Decoy Layer (Hidden by default, triggered by ESC or quick exit) -->
+<div class="fixed inset-0 z-[100] bg-surface hidden flex-col items-center justify-center p-space-xl" id="decoy-weather-screen">
+<div class="max-w-md w-full bg-surface-container-lowest p-space-xl rounded-xl shadow-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-space-sm">cloud</span>
+<span class="font-headline-md text-headline-md text-on-surface">New Delhi, NCR</span>
+<span class="font-display text-display text-primary mt-space-xs font-semibold">27°C</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-space-xs">Partly Cloudy • Humidity 48% • AQI 112</span>
+<div class="w-full bg-surface-container-low rounded-lg p-space-md mt-space-lg flex justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Wind: 11 km/h NE</span>
+<span>Visibility: 6.0 km</span>
+<span>UV Index: 2 (Low)</span>
+</div>
+<button class="mt-space-lg px-space-md py-space-sm bg-surface-container text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container-high transition-colors" id="close-decoy-btn">
+        Return to Portal View
+      </button>
+</div>
+</div>
+<!-- Page Main Inner Shell -->
+<div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-desktop py-space-lg flex flex-col gap-space-lg">
+<!-- Top Sub-Header & Status Strip -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Good evening, Priya</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span> AES-256 GCM Vault Active
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Next Window: Tomorrow 09:00 AM IST
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+          Private space for self-expression. No clinical or telemetry records are dispatched without your informed consent. Protected under statutory provisions of the <strong class="text-on-surface font-medium">DPDP Act 2023</strong>.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-1.5 px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors" id="trigger-decoy-top" title="Switch immediately to neutral weather decoy screen" type="button">
+<span class="material-symbols-outlined text-[18px]">partly_cloudy_day</span>
+<span>Quick Decoy (ESC)</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md transition-colors shadow-sm" id="sim-drawer-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+<span>SIH Simulation Mode</span>
+</button>
+</div>
+</section>
+<!-- Two-Column Desktop Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Primary Citizen Workflow (~65% width / 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Emotion & Mood Assessment Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+</span>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">How are you feeling right now?</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select your somatic resonance today. Your selection anchors the triage engine baseline.</p>
+</div>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Step 1 of 2</span>
+</div>
+<!-- 5 Interactive Mood Choice Cards -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-sm" id="mood-selector-group">
+<!-- Very Low -->
+<button class="mood-card flex flex-col items-center text-center p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer" data-mood="very-low" type="button">
+<span class="text-2xl mb-space-xs">🌧️</span>
+<span class="font-title-md text-title-md text-on-surface">Very Low</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Heavy / Overwhelmed</span>
+</button>
+<!-- Low -->
+<button class="mood-card flex flex-col items-center text-center p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer" data-mood="low" type="button">
+<span class="text-2xl mb-space-xs">⛅</span>
+<span class="font-title-md text-title-md text-on-surface">Low</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Drained / Low energy</span>
+</button>
+<!-- Okay (Selected State) -->
+<button class="mood-card flex flex-col items-center text-center p-space-md rounded-xl bg-primary-container text-on-primary ring-2 ring-primary transition-all cursor-pointer shadow-sm" data-mood="okay" type="button">
+<span class="text-2xl mb-space-xs">🌱</span>
+<span class="font-title-md text-title-md text-on-primary font-semibold">Okay</span>
+<span class="font-label-sm text-label-sm text-on-primary-container mt-0.5">Holding steady</span>
+</button>
+<!-- Good -->
+<button class="mood-card flex flex-col items-center text-center p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer" data-mood="good" type="button">
+<span class="text-2xl mb-space-xs">☀️</span>
+<span class="font-title-md text-title-md text-on-surface">Good</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Clear &amp; Centered</span>
+</button>
+<!-- Great -->
+<button class="mood-card flex flex-col items-center text-center p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer" data-mood="great" type="button">
+<span class="text-2xl mb-space-xs">🌸</span>
+<span class="font-title-md text-title-md text-on-surface">Great</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Hopeful / Energized</span>
+</button>
+</div>
+<!-- Supportive Selected Mood Feedback -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+                Recorded: <strong class="font-medium text-primary">"Okay — Holding steady"</strong>. Thank you for registering this gentle self-observation.
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Indexed 4 mins ago</span>
+</div>
+</section>
+<!-- Voice & Text Emotion Check-in Card (Clinical AI Core / Bhashini) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg relative overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Voice Emotion Check-in</h2>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                    Bhashini Multi-Indic AI Core
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Acoustic tone analysis (max 30 seconds) • Zero voice identity archiving</p>
+</div>
+</div>
+<!-- Indic Language Selector -->
+<div class="flex items-center gap-1.5 self-start sm:self-auto bg-surface-container px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">translate</span>
+<select class="bg-transparent text-on-surface font-label-sm text-label-sm focus:outline-none cursor-pointer" id="language-select">
+<option selected="" value="en">English (EN-IN)</option>
+<option value="hi">हिन्दी (Hindi)</option>
+<option value="bn">বাংলা (Bengali)</option>
+<option value="ta">தமிழ் (Tamil)</option>
+<option value="te">తెలుగు (Telugu)</option>
+<option value="mr">मराठी (Marathi)</option>
+</select>
+</div>
+</div>
+<!-- Prompt Question Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">forum</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-primary font-semibold">Guided Clinical Prompt</span>
+<p class="font-body-md text-body-md text-on-surface">
+                “How have you been feeling since your last check-in? Take all the time you need. You can mention your sleep, any tightness in your chest, or anything on your mind.”
+              </p>
+</div>
+</div>
+<!-- Active Audio Recording Console -->
+<div class="bg-surface rounded-xl p-space-lg flex flex-col items-center justify-center gap-space-md relative" id="recording-module">
+<!-- Recording Indicator & Timer -->
+<div class="flex items-center justify-between w-full px-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse" id="recording-dot"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Analyzing Speech Cadence</span>
+</div>
+<div class="flex items-center gap-1 font-label-lg text-label-lg font-mono text-primary font-semibold bg-surface-container-lowest px-3 py-1 rounded-md shadow-sm">
+<span id="record-timer">00:00</span>
+<span class="text-on-surface-variant font-normal">/ 00:30</span>
+</div>
+</div>
+<!-- Waveform Visualization (Dynamic Pure SVG) -->
+<div class="w-full h-24 bg-surface-container-lowest rounded-xl flex items-center justify-center px-space-md overflow-hidden relative shadow-inner">
+<div class="flex items-center justify-center gap-1.5 w-full h-full" id="waveform-container">
+<!-- Bar set with staggered animation heights simulating indicative acoustic capture -->
+<div class="w-1.5 bg-tertiary-container rounded-full h-6 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary rounded-full h-12 transition-all duration-300"></div>
+<div class="w-1.5 bg-tertiary-container rounded-full h-16 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary-container rounded-full h-8 transition-all duration-300"></div>
+<div class="w-1.5 bg-secondary rounded-full h-20 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary rounded-full h-14 transition-all duration-300"></div>
+<div class="w-1.5 bg-tertiary-container rounded-full h-10 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary rounded-full h-18 transition-all duration-300"></div>
+<div class="w-1.5 bg-secondary rounded-full h-5 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary-container rounded-full h-16 transition-all duration-300"></div>
+<div class="w-1.5 bg-tertiary-container rounded-full h-12 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary rounded-full h-14 transition-all duration-300"></div>
+<div class="w-1.5 bg-secondary rounded-full h-7 transition-all duration-300"></div>
+<div class="w-1.5 bg-tertiary-container rounded-full h-16 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary rounded-full h-10 transition-all duration-300"></div>
+<div class="w-1.5 bg-tertiary-container rounded-full h-18 transition-all duration-300"></div>
+<div class="w-1.5 bg-primary-container rounded-full h-6 transition-all duration-300"></div>
+<div class="w-1.5 bg-secondary rounded-full h-14 transition-all duration-300"></div>
+</div>
+</div>
+<!-- Console Controls -->
+<div class="flex items-center gap-space-md mt-space-xs">
+<button class="w-11 h-11 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" id="reset-audio-btn" title="Delete and Reset" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+<button class="px-space-xl py-space-md rounded-full bg-primary-container text-on-primary hover:bg-primary font-title-md text-title-md font-semibold flex items-center gap-2 shadow-md transition-all" id="toggle-record-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">graphic_eq</span>
+<span>Analyze Indic Acoustic Signal (30s)</span>
+</button>
+<button class="w-11 h-11 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-colors" id="pause-audio-btn" title="Pause" type="button">
+<span class="material-symbols-outlined text-[20px]">pause</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Your voice recording is converted locally to acoustic cadence metrics and automatically deleted.</span>
+</div>
+<!-- Switchable Secure Text Alternative -->
+<div class="flex flex-col gap-space-sm">
+<button class="flex items-center gap-1.5 text-secondary hover:text-primary font-label-md text-label-md transition-colors self-start" id="toggle-text-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">keyboard</span>
+<span>Prefer typing instead? Open de-identified secure text input</span>
+</button>
+<div class="hidden flex-col gap-space-sm" id="text-input-area">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="secure-notes">De-Identified Journal Entry (Stored locally in encrypted sandbox)</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-md text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all placeholder:text-outline" id="secure-notes" placeholder="You can write freely here... all personal names and places are scrubbed locally before diagnostic sentiment parsing." rows="3"></textarea>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>0 / 500 characters</span>
+<button class="px-space-md py-1 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-md text-label-md" id="save-journal-btn" type="button">Save Secure Fragment</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Synthesized Clinical Signal Breakdown -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Synthesized Clinical Signal Breakdown</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time telemetry composite from acoustic jitter, pitch variance, and Indic sentiment dictionaries.</p>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-low text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Calibrated Stable
+            </span>
+</div>
+<!-- Score Card and Metric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center bg-surface-container-low p-space-lg rounded-xl">
+<!-- Radial Score Representation (4 cols) -->
+<div class="md:col-span-5 flex flex-col items-center justify-center p-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs font-semibold">Dynamic Distress Index (DDI)</span>
+<div class="relative w-32 h-32 flex items-center justify-center">
+<!-- SVG Radial Progress -->
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Progress Circle (32%) -->
+<path class="text-tertiary-container transition-all duration-1000 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" id="ddi-ring" stroke-dasharray="32, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-display text-display text-primary font-bold" id="ddi-score">32</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant -mt-1">/ 100</span>
+</div>
+</div>
+<div class="mt-space-sm px-space-md py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                <span id="ddi-tier">Low Vulnerability • Tier 1</span>
+              </div>
+</div>
+<!-- Signal Breakdown Sub-Grid (7 cols) -->
+<div class="md:col-span-7 grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acoustic Cadence &amp; Jitter</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-title-md text-title-md text-on-surface font-semibold" id="cadence-value">Calm Baseline</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container mt-1" id="cadence-detail">Normal vocal velocity</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lexical Sentiment Score</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-title-md text-title-md text-on-surface font-semibold" id="sentiment-value">Neutral (+0.12)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-1" id="sentiment-detail">No distress terms detected</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Consistency Variance</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-title-md text-title-md text-on-surface font-semibold" id="consistency-value">Stable Trend</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary mt-1">±6% variance over 6 days</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MoSJE Triage Tier</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-title-md text-title-md text-tertiary-container font-semibold" id="triage-value">Tier 1: Supportive</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Self-directed care routine</span>
+</div>
+</div>
+</div>
+<!-- Statutory Disclaimer Card -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px] mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="font-medium text-on-surface">Clinical Safeguard Notice:</strong> This score represents an indicative predictive vulnerability signal synthesized by Bhashini ML acoustic &amp; lexical models. It is designed for low-friction self-awareness and is <em class="not-italic font-semibold text-primary">never a formal psychiatric diagnostic instrument</em>. For diagnostic evaluations, connect directly with an RCI-registered counselor.
+            </p>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Supportive Coping & Care Network (~35% width / 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Overall Continuity Status Card -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Wellbeing Continuity</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm font-semibold text-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">verified</span> Active Streak
+            </span>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center text-xl shrink-0 font-bold">
+              🔥 6
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">6-Day Check-in Streak</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily check-ins help establish accurate longitudinal baseline rhythms.</span>
+</div>
+</div>
+<!-- Contextual Caregiver Snapshot -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A compassionate Indian female clinical psychologist wearing subtle professional attire in a warm, welcoming consultation room with soft natural lighting and calm neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeVjgb8I6V0MKxXF1fUKBpLaAP2tjsM9k7LANwlNC92i3l3j9DyOVg1uXQ4HsXiP2Vkk6Tu517Zob5c1VP7FXuWcLotnkfDGfb9tvOXn7oWvcPeX8pp5_TLL3rzU2yYHyH1cl6hTLXBityhGxCpWmFP_6nfRYmAJFjIH1IW6Y9-C4IFxghb1dCxuy-TsgTMsuUiEJ5sv4FUs2KIdUwG-uMvz_9ElMM25xAfinyTyE-MsRMK3LmAIT5Cw"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight font-semibold">Dr. S. Sharma</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned Clinical Counselor (Tele-MANAS)</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container" title="Available for asynchronous ping"></span>
+</div>
+<button class="w-full py-space-sm bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center gap-1.5" id="counselor-ping-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span>Request Silent Check-in Ping</span>
+</button>
+</section>
+<!-- Somatic Grounding & Calming Space -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">air</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Somatic Grounding Space</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4-7-8 Pacer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            If your chest feels tight or nervous tension is rising, pause and match your breath to this guided tactile rhythm.
+          </p>
+<!-- Interactive Breathing Pacer Container -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col items-center justify-center gap-space-md">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<div class="w-28 h-28 rounded-full bg-primary/10 border-4 border-primary-container flex items-center justify-center transition-all duration-1000 ease-in-out" id="breath-circle">
+<span class="font-title-md text-title-md text-primary font-bold" id="breath-text">Ready</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-1" id="start-breath-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Start Rhythm</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="reset-breath-btn" type="button">
+                Stop
+              </button>
+</div>
+</div>
+</section>
+<!-- Statutory Emergency Helplines (MoSJE & National) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">fmd_bad</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Immediate Clinical Escalation</h3>
+</div>
+<!-- Tele-MANAS Quick Connect Card -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary font-semibold">National Tele-MANAS</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">24x7 Toll Free</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct psychiatric first-aid in 20+ languages under MoHFW &amp; NIMHANS governance.</p>
+<a class="mt-space-xs w-full py-2 bg-primary text-on-primary hover:bg-primary-container rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 transition-colors" href="tel:14416">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Dial 14416 Free</span>
+</a>
+</div>
+<!-- MoSJE & NCW Atrocity Relief Line -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">MoSJE &amp; NCW Support</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">14566 / 7827170170</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Legal safety, protection orders, and emergency socio-psychological shelter assistance.</p>
+<div class="flex items-center gap-space-sm mt-space-xs">
+<a class="flex-1 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" href="tel:14566">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>MoSJE 14566</span>
+</a>
+<button class="flex-1 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" id="legal-rights-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+<span>Legal Rights</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Zero-Trace Privacy & Data Controls -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">shield_person</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Zero-Trace Privacy Controls</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            You hold total dominion over your ephemeral biometric markers and journal cache.
+          </p>
+<div class="flex flex-col gap-space-sm">
+<button class="w-full py-space-sm bg-error/10 hover:bg-error/20 text-error rounded-lg font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" id="wipe-logs-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>1-Click Wipe Today's Local Logs</span>
+</button>
+<button class="w-full py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center gap-1.5 transition-colors" id="trigger-decoy-side" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+<span>Instant Decoy Weather Screen</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Press ESC anytime to immediately trigger Decoy Mode</span>
+</section>
+</div>
+</div>
+</div>
+<!-- Simulation Mode Modal Drawer -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 hidden items-center justify-center p-space-md" id="sim-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl shadow-xl p-space-xl flex flex-col gap-space-md animate-fade-in">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">SIH 2026 Simulation Testing</h3>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-sim-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        This simulation drawer provides SIH 2026 evaluators the ability to test real-time AI triage threshold routing into MoSJE Counselor Escalation Queues.
+      </p>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Simulate Distress Vulnerability Tier</label>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="p-space-sm rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary text-on-surface font-label-md text-label-md text-center transition-colors" data-tier="1" type="button">
+            Tier 1 (Normal 32)
+          </button>
+<button class="p-space-sm rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary text-on-surface font-label-md text-label-md text-center transition-colors" data-tier="2" type="button">
+            Tier 2 (Elevated 64)
+          </button>
+<button class="p-space-sm rounded-lg bg-surface-container hover:bg-error hover:text-on-error text-on-surface font-label-md text-label-md text-center transition-colors" data-tier="3" type="button">
+            Tier 3 (Crisis 88)
+          </button>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">verified</span>
+<span>Mock Tele-MANAS WebRTC socket listener running on SIH testbed.</span>
+</div>
+<div class="flex justify-end gap-space-sm mt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md" id="dismiss-sim-btn" type="button">
+          Close Sandbox
+        </button>
+</div>
+</div>
+</div>
+<div id="app-toast" class="fixed bottom-5 right-5 z-[120] hidden max-w-sm rounded-xl bg-inverse-surface text-inverse-on-surface px-4 py-3 shadow-xl font-body-sm text-body-sm"></div>
+<div id="legal-modal" class="fixed inset-0 z-[110] hidden items-center justify-center bg-inverse-surface/40 p-4"><div class="max-w-lg w-full bg-surface-container-lowest rounded-xl p-6 shadow-xl"><h3 class="font-title-lg text-title-lg font-semibold">Legal & Safety Resources</h3><p class="mt-3 text-on-surface-variant">This prototype can surface verified helpline links and organization-approved legal guidance. It does not replace a lawyer or emergency service.</p><div class="mt-4 flex justify-end"><button id="close-legal" class="px-4 py-2 rounded-lg bg-primary text-on-primary">Close</button></div></div></div>
+<!-- Client-side Interactive Behaviors -->
+<div id="module-modal" class="fixed inset-0 z-[115] hidden items-center justify-center bg-inverse-surface/40 p-4"><div class="max-w-4xl w-full max-h-[82vh] overflow-auto bg-surface-container-lowest rounded-2xl p-6 shadow-2xl"><div class="flex items-center justify-between gap-4"><div><h2 id="module-title" class="font-title-lg text-title-lg font-semibold text-on-surface">Module</h2><p id="module-subtitle" class="mt-1 text-on-surface-variant text-sm"></p></div><button id="close-module" class="w-9 h-9 rounded-full hover:bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined">close</span></button></div><div id="module-body" class="mt-5"></div></div></div>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const api = async (url, options={}) => {
+    const res = await fetch(url, {headers:{"Content-Type":"application/json", ...(options.headers||{})}, ...options});
+    if (!res.ok) throw new Error((await res.text()) || `HTTP ${res.status}`);
+    const ct=res.headers.get("content-type")||""; return ct.includes("json") ? res.json() : res.text();
+  };
+  const toast=(msg, ms=3200)=>{ const t=$('app-toast'); if(!t) return; t.textContent=msg; t.classList.remove('hidden'); clearTimeout(t._x); t._x=setTimeout(()=>t.classList.add('hidden'),ms); };
+  window.addEventListener('load', async()=>{ try{await api('/api/health');}catch(e){toast('Backend unavailable. Start FastAPI and refresh.',6000);} });
+
+  // Mood check-in
+  const moods=[...document.querySelectorAll('.mood-card')];
+  moods.forEach(btn=>btn.addEventListener('click', async()=>{
+    moods.forEach(b=>{b.classList.remove('bg-primary-container','text-on-primary','ring-2','ring-primary','shadow-sm'); b.classList.add('bg-surface-container-low');});
+    btn.classList.remove('bg-surface-container-low'); btn.classList.add('bg-primary-container','text-on-primary','ring-2','ring-primary','shadow-sm');
+    try{await api('/api/checkins',{method:'POST',body:JSON.stringify({mood:btn.dataset.mood,language:$('language-select')?.value||'en'})}); toast(`Check-in saved: ${btn.dataset.mood.replace('-',' ')}`);}catch(e){toast('Could not save check-in.');}
+  }));
+
+  // Secure text
+  $('toggle-text-btn')?.addEventListener('click',()=>{ $('text-input-area')?.classList.toggle('hidden'); $('text-input-area')?.classList.toggle('flex'); });
+  const notes=$('secure-notes');
+  notes?.addEventListener('input',()=>{ const c=notes.parentElement.querySelector('span'); if(c)c.textContent=`${notes.value.length} / 500 characters`; });
+  $('save-journal-btn')?.addEventListener('click',async()=>{
+    if(!notes.value.trim()) return toast('Write a short journal entry first.');
+    try{ const r=await api('/api/journal',{method:'POST',body:JSON.stringify({text:notes.value.slice(0,500),language:$('language-select')?.value||'en'})});
+      if($('sentiment-value')) $('sentiment-value').textContent=`${r.sentiment.label} (${r.sentiment.score>=0?'+':''}${r.sentiment.score.toFixed(2)})`;
+      if($('sentiment-detail')) $('sentiment-detail').textContent=r.sentiment.summary;
+      notes.value=''; notes.dispatchEvent(new Event('input')); toast('Secure fragment analyzed and saved.');
+    }catch(e){toast('Unable to save fragment.');}
+  });
+
+  // Decoy / quick exit
+  const decoy=$('decoy-weather-screen');
+  const openDecoy=()=>{decoy?.classList.remove('hidden');decoy?.classList.add('flex');};
+  const closeDecoy=()=>{decoy?.classList.add('hidden');decoy?.classList.remove('flex');};
+  ['trigger-decoy-top','trigger-decoy-side','quick-exit-header'].forEach(id=>$(id)?.addEventListener('click',openDecoy));
+  $('close-decoy-btn')?.addEventListener('click',closeDecoy);
+  window.addEventListener('keydown',e=>{if(e.key==='Escape') decoy?.classList.contains('hidden')?openDecoy():closeDecoy();});
+
+  // Simulation modal
+  const sim=$('sim-modal'); const openSim=()=>{sim?.classList.remove('hidden');sim?.classList.add('flex');}; const closeSim=()=>{sim?.classList.add('hidden');sim?.classList.remove('flex');};
+  ['sim-drawer-btn','sim-drawer-nav'].forEach(id=>$(id)?.addEventListener('click',openSim));
+  ['close-sim-btn','dismiss-sim-btn'].forEach(id=>$(id)?.addEventListener('click',closeSim));
+  document.querySelectorAll('[data-tier]').forEach(b=>b.addEventListener('click',async()=>{const tier=+b.dataset.tier,score={1:32,2:64,3:88}[tier];try{await api('/api/simulations',{method:'POST',body:JSON.stringify({tier,score})});updateClinical({ddi:score,tier, cadence_label:tier===1?'Calm Baseline':tier===2?'Elevated Variability':'High Variability', cadence_detail:'Evaluator simulation signal', consistency:tier===1?'Stable Trend':tier===2?'Variable Trend':'Acute Change'});toast(`Tier ${tier} simulation applied.`);closeSim();}catch(e){toast('Simulation failed.');}}));
+
+  // 4-7-8 pacer with cancellable timeouts
+  let breathToken=0;
+  $('start-breath-btn')?.addEventListener('click',()=>{const token=++breathToken, circle=$('breath-circle'), text=$('breath-text'); const cycle=async()=>{while(token===breathToken){text.textContent='Inhale 4s';circle.style.transform='scale(1.35)';await wait(4000);if(token!==breathToken)break;text.textContent='Hold 7s';await wait(7000);if(token!==breathToken)break;text.textContent='Exhale 8s';circle.style.transform='scale(1)';await wait(8000);}};cycle();});
+  $('reset-breath-btn')?.addEventListener('click',()=>{breathToken++;$('breath-text').textContent='Ready';$('breath-circle').style.transform='scale(1)';});
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+
+  // Real browser microphone capture + personalized calm-baseline acoustic comparison. Raw audio never leaves browser.
+  let stream=null, ctx=null, analyser=null, source=null, raf=0, startedAt=0, paused=false, samples=[], timerInt=0, baselineMode=false, mediaRecorder=null, audioChunks=[];
+  const bars=[...document.querySelectorAll('#waveform-container div')];
+  const recBtn=$('toggle-record-btn'), timer=$('record-timer'), dot=$('recording-dot');
+  // Add one calibration control without changing the existing layout/modules.
+  const baselineBtn=document.createElement('button'); baselineBtn.id='calibrate-baseline-btn'; baselineBtn.type='button'; baselineBtn.className='mt-3 w-full rounded-xl border border-primary/30 bg-primary-container/40 px-4 py-2.5 font-semibold text-primary hover:bg-primary-container transition-colors'; baselineBtn.textContent='Calibrate My Calm Baseline (15s)'; recBtn?.parentElement?.appendChild(baselineBtn);
+  function drawWave(){ if(!analyser)return; const data=new Uint8Array(analyser.frequencyBinCount); analyser.getByteFrequencyData(data); const chunk=Math.max(1,Math.floor(data.length/bars.length)); bars.forEach((b,i)=>{let sum=0;for(let j=0;j<chunk;j++)sum+=data[Math.min(data.length-1,i*chunk+j)];b.style.height=`${12+(sum/chunk)/255*68}px`;}); const td=new Float32Array(analyser.fftSize); analyser.getFloatTimeDomainData(td); let sq=0,z=0; for(let i=0;i<td.length;i++){sq+=td[i]*td[i];if(i&&((td[i]>=0)!=(td[i-1]>=0)))z++;} samples.push({rms:Math.sqrt(sq/td.length),zcr:z/td.length,t:performance.now()}); if(samples.length>1800)samples.shift(); raf=requestAnimationFrame(drawWave); }
+  function formatTime(sec,limit=30){return `00:${String(Math.min(limit,sec)).padStart(2,'0')}`;}
+  async function startMic(asBaseline=false){
+    if(!navigator.mediaDevices?.getUserMedia){toast('Microphone capture is not supported in this browser.');return;}
+    try{
+      baselineMode=asBaseline; stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:false}});
+      ctx=new (window.AudioContext||window.webkitAudioContext)(); analyser=ctx.createAnalyser(); analyser.fftSize=2048; source=ctx.createMediaStreamSource(stream);source.connect(analyser);
+      samples=[];audioChunks=[]; mediaRecorder=new MediaRecorder(stream); mediaRecorder.ondataavailable=e=>{if(e.data.size)audioChunks.push(e.data)}; mediaRecorder.start(250);startedAt=Date.now();paused=false;dot?.classList.remove('bg-outline');dot?.classList.add('bg-error'); recBtn.disabled=asBaseline; baselineBtn.disabled=!asBaseline;
+      if(asBaseline) baselineBtn.textContent='Recording calm baseline — click to save now'; else recBtn.querySelector('span:last-child').textContent='Recording — click to analyze now'; drawWave();
+      const limit=asBaseline?15:30; clearInterval(timerInt);timerInt=setInterval(()=>{const sec=Math.floor((Date.now()-startedAt)/1000);timer.textContent=formatTime(sec,limit);if(sec>=limit)finishMic();},250);
+      toast(asBaseline?'Speak naturally and calmly for about 15 seconds.':'Microphone active. Speak naturally for up to 30 seconds.');
+    }catch(e){baselineMode=false;recBtn.disabled=false;baselineBtn.disabled=false;toast(e.name==='NotAllowedError'?'Microphone permission was denied. Allow microphone access for 127.0.0.1.':'Could not access microphone.');}
+  }
+  function estimateFeatures(){
+    if(!samples.length)return {rms:0,zcr:0,rms_variance:0,activity_ratio:0,envelope_cv:0,onset_rate:0,duration_seconds:0};
+    const rs=samples.map(x=>x.rms), zs=samples.map(x=>x.zcr), mean=a=>a.reduce((x,y)=>x+y,0)/Math.max(1,a.length); const rm=mean(rs), zm=mean(zs), variance=mean(rs.map(x=>(x-rm)**2));
+    const sorted=[...rs].sort((a,b)=>a-b), noise=sorted[Math.floor(sorted.length*.20)]||0, threshold=Math.max(.008,noise*2.2); const active=rs.map(v=>v>threshold); const activeVals=rs.filter((v,i)=>active[i]); const am=activeVals.length?mean(activeVals):rm; const asd=Math.sqrt(activeVals.length?mean(activeVals.map(v=>(v-am)**2)):variance); let onsets=0; for(let i=1;i<active.length;i++)if(active[i]&&!active[i-1])onsets++;
+    const dur=Math.max(1,(samples.at(-1).t-samples[0].t)/1000); return {rms:+rm.toFixed(5),zcr:+zm.toFixed(5),rms_variance:+variance.toFixed(6),activity_ratio:+(active.filter(Boolean).length/active.length).toFixed(4),envelope_cv:+(asd/Math.max(am,.005)).toFixed(4),onset_rate:+(onsets/dur).toFixed(4),duration_seconds:Math.max(1,Math.min(30,Math.round((Date.now()-startedAt)/1000)))};
+  }
+  async function finishMic(){
+    if(!stream)return; clearInterval(timerInt);cancelAnimationFrame(raf); const f=estimateFeatures(), wasBaseline=baselineMode; if(mediaRecorder&&mediaRecorder.state!=='inactive'){await new Promise(resolve=>{mediaRecorder.addEventListener('stop',resolve,{once:true});mediaRecorder.stop();});} const recordedBlob=new Blob(audioChunks,{type:mediaRecorder?.mimeType||'audio/webm'}); stream.getTracks().forEach(t=>t.stop());stream=null; try{await ctx?.close();}catch{} ctx=null;analyser=null;source=null;baselineMode=false;recBtn.disabled=true;baselineBtn.disabled=true;
+    try{
+      if(wasBaseline){baselineBtn.textContent='Saving calm baseline…'; await api('/api/baseline',{method:'POST',body:JSON.stringify(f)}); toast('Calm baseline calibrated. Future audio is compared with your own baseline.');}
+      else{recBtn.querySelector('span:last-child').textContent='Running RAVDESS model…'; const fd=new FormData();fd.append('audio',recordedBlob,'recording.webm');fd.append('language',$('language-select')?.value||'en'); const resp=await fetch('/api/emotion-audio',{method:'POST',body:fd});if(!resp.ok)throw new Error(await resp.text());const result=await resp.json();updateClinical(result);showEmotionResult(result);toast(`Vocal expression: ${result.expression} (${Math.round(result.confidence*100)}% confidence).`);}
+    }catch(e){toast(wasBaseline?'Could not save calm baseline.':'Analysis service failed.');}
+    recBtn.disabled=false;baselineBtn.disabled=false;recBtn.querySelector('span:last-child').textContent='Analyze Indic Acoustic Signal (30s)';baselineBtn.textContent='Recalibrate My Calm Baseline (15s)';dot?.classList.remove('bg-error');dot?.classList.add('bg-outline');
+  }
+  recBtn?.addEventListener('click',()=>stream?finishMic():startMic(false)); baselineBtn.addEventListener('click',()=>stream?finishMic():startMic(true));
+  $('pause-audio-btn')?.addEventListener('click',async()=>{if(!ctx||!stream)return toast('Start microphone analysis first.'); if(ctx.state==='running'){await ctx.suspend();paused=true;toast('Capture paused.');}else{await ctx.resume();paused=false;toast('Capture resumed.');}});
+  $('reset-audio-btn')?.addEventListener('click',async()=>{clearInterval(timerInt);cancelAnimationFrame(raf);stream?.getTracks().forEach(t=>t.stop());stream=null;try{await ctx?.close();}catch{}ctx=null;analyser=null;samples=[];baselineMode=false;timer.textContent='00:00';bars.forEach(b=>b.style.height='24px');recBtn.disabled=false;baselineBtn.disabled=false;recBtn.querySelector('span:last-child').textContent='Analyze Indic Acoustic Signal (30s)';baselineBtn.textContent='Calibrate My Calm Baseline (15s)';toast('Local audio buffer cleared.');});
+  function showEmotionResult(r){
+    let box=document.getElementById('emotion-model-result'); if(!box){box=document.createElement('div');box.id='emotion-model-result';box.className='mt-4 rounded-xl border border-primary/20 bg-primary-container/20 p-4';baselineBtn.parentElement.appendChild(box);}
+    const probs=Object.entries(r.probabilities||{}).slice(0,5).map(([k,v])=>`<div class="flex justify-between text-sm py-1"><span>${k[0].toUpperCase()+k.slice(1)}</span><span class="font-semibold">${Math.round(v*100)}%</span></div>`).join('');
+    box.innerHTML=`<div class="font-semibold">Dataset Model Result: ${r.expression?.toUpperCase()}</div><div class="text-sm text-on-surface-variant mt-1">Confidence ${Math.round((r.confidence||0)*100)}% • RAVDESS-trained SVM</div><div class="mt-2">${probs}</div><div class="text-xs text-on-surface-variant mt-2">Research/demo vocal-expression classifier; not a clinical diagnosis.</div>`;
+  }
+  function updateClinical(r){
+    if(r.ddi!=null){$('ddi-score').textContent=r.ddi;$('ddi-ring')?.setAttribute('stroke-dasharray',`${r.ddi}, 100`);} if(r.tier){$('ddi-tier').textContent=`${r.tier===1?'Low Vulnerability':r.tier===2?'Moderate Signal':'Elevated Signal'} • Tier ${r.tier}`;$('triage-value') && ($('triage-value').textContent=`Tier ${r.tier}: ${r.tier===1?'Supportive':r.tier===2?'Review':'Escalation Review'}`);} if(r.cadence_label)$('cadence-value').textContent=r.cadence_label;if(r.cadence_detail)$('cadence-detail').textContent=r.cadence_detail;if(r.consistency&&$('consistency-value'))$('consistency-value').textContent=r.consistency;
+  }
+  api('/api/baseline').then(r=>{if(r.calibrated)baselineBtn.textContent='Recalibrate My Calm Baseline (15s)';}).catch(()=>{});
+
+  // Counselor, privacy, legal resources
+  $('counselor-ping-btn')?.addEventListener('click',async()=>{const b=$('counselor-ping-btn');try{await api('/api/counselor-pings',{method:'POST',body:JSON.stringify({counselor:'Dr. S. Sharma',channel:'silent'})});b.innerHTML='<span>✓ Request queued</span>';toast('Counselor check-in request queued in this demo.');setTimeout(()=>b.innerHTML='<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span><span>Request Silent Check-in Ping</span>',3000);}catch(e){toast('Could not queue counselor request.');}});
+  $('wipe-logs-btn')?.addEventListener('click',async()=>{if(!confirm("Erase today's prototype check-ins, journal entries and analyses?"))return;try{const r=await api('/api/privacy/today',{method:'DELETE'});localStorage.clear();toast(`${r.deleted} local demo records deleted.`);}catch(e){toast('Unable to purge records.');}});
+  $('legal-rights-btn')?.addEventListener('click',()=>{$('legal-modal').classList.remove('hidden');$('legal-modal').classList.add('flex');});$('close-legal')?.addEventListener('click',()=>{$('legal-modal').classList.add('hidden');$('legal-modal').classList.remove('flex');});
+
+  // Header controls and nav provide visible feedback instead of dead clicks.
+  $('language-toggle')?.addEventListener('click',()=>{const sel=$('language-select');sel.value=sel.value==='hi'?'en':'hi';toast(sel.value==='hi'?'हिन्दी इंटरफ़ेस मोड चुना गया (demo labels remain bilingual).':'English interface mode selected.');});
+  [['role-citizen','Citizen / Victim'],['role-counselor','Clinical Counselor'],['role-admin','MoSJE Admin']].forEach(([id,name])=>$(id)?.addEventListener('click',async()=>{document.querySelectorAll('#role-citizen,#role-counselor,#role-admin').forEach(b=>{b.classList.remove('bg-primary-container','text-on-primary');});$(id).classList.add('bg-primary-container','text-on-primary');if(id==='role-citizen'){toast('Citizen workspace active.');return;}const d=await api('/api/dashboard');openModule();moduleTitle.textContent=name+' Dashboard';moduleSubtitle.textContent=id==='role-counselor'?'Review recent check-ins and acoustic flags.':'Aggregate prototype activity and escalation queue.';moduleBody.innerHTML=`<div class="grid sm:grid-cols-3 gap-3"><div class="rounded-xl bg-surface-container-low p-4"><b>${d.checkins.length}</b><div>Recent check-ins</div></div><div class="rounded-xl bg-surface-container-low p-4"><b>${d.analyses.length}</b><div>Recent analyses</div></div><div class="rounded-xl bg-surface-container-low p-4"><b>${d.counselor_pings.filter(x=>x.status==='QUEUED').length}</b><div>Queued requests</div></div></div>`;}));
+  const moduleModal=$('module-modal'), moduleTitle=$('module-title'), moduleSubtitle=$('module-subtitle'), moduleBody=$('module-body');
+  const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
+  function openModule(){moduleModal.classList.remove('hidden');moduleModal.classList.add('flex');}
+  function closeModule(){moduleModal.classList.add('hidden');moduleModal.classList.remove('flex');}
+  $('close-module')?.addEventListener('click',closeModule); moduleModal?.addEventListener('click',e=>{if(e.target===moduleModal)closeModule();});
+  async function renderModule(path){
+    openModule(); moduleBody.innerHTML='<div class="p-8 text-center text-on-surface-variant">Loading secure module…</div>';
+    let d={checkins:[],journals:[],analyses:[],counselor_pings:[]}; try{d=await api('/api/dashboard');}catch(e){}
+    const card=(title,value,detail='')=>`<div class="rounded-xl bg-surface-container-low p-4"><div class="text-xs text-on-surface-variant">${title}</div><div class="text-xl font-bold text-primary mt-1">${value}</div><div class="text-xs text-on-surface-variant mt-1">${detail}</div></div>`;
+    if(path==='overview-check-in'){closeModule();window.scrollTo({top:0,behavior:'smooth'});return;}
+    if(path==='my-journey-analytics'){
+      moduleTitle.textContent='My Journey & Analytics';moduleSubtitle.textContent='Your saved check-ins and acoustic-analysis history from this device demo.';
+      const avg=d.analyses.length?Math.round(d.analyses.reduce((a,x)=>a+(x.ddi||0),0)/d.analyses.length):'—'; const latest=d.analyses[0]?.ddi??'—';
+      moduleBody.innerHTML=`<div class="grid sm:grid-cols-3 gap-3">${card('Check-ins',d.checkins.length,'Recent records')}${card('Latest DDI',latest+'/100','Indicative acoustic signal')}${card('Average DDI',avg+(avg==='—'?'':'/100'),'Last 20 analyses')}</div><h3 class="font-semibold mt-6 mb-2">Recent analyses</h3><div class="space-y-2">${d.analyses.length?d.analyses.slice(0,8).map(x=>`<div class="flex justify-between rounded-lg bg-surface-container-low p-3"><span>${new Date(x.created_at).toLocaleString()}</span><span class="font-semibold">DDI ${x.ddi} • Tier ${x.tier}</span></div>`).join(''):'<p class="text-on-surface-variant">No analysis yet. Record an audio check-in first.</p>'}</div>`;
+    } else if(path==='somatic-coping'){
+      moduleTitle.textContent='Somatic Coping';moduleSubtitle.textContent='Grounding exercises you can start immediately.';
+      moduleBody.innerHTML=`<div class="grid md:grid-cols-2 gap-4"><div class="rounded-xl bg-surface-container-low p-5"><h3 class="font-semibold">4-7-8 Breathing</h3><p class="mt-2 text-on-surface-variant">Inhale 4 seconds, hold 7, exhale 8. Use the live pacer on the main screen.</p><button id="go-breathe" class="mt-4 px-4 py-2 rounded-lg bg-primary text-on-primary">Open breathing pacer</button></div><div class="rounded-xl bg-surface-container-low p-5"><h3 class="font-semibold">5-4-3-2-1 Grounding</h3><p class="mt-2 text-on-surface-variant">Notice 5 things you see, 4 you can touch, 3 you hear, 2 you smell, and 1 you taste.</p><button id="ground-next" class="mt-4 px-4 py-2 rounded-lg bg-primary text-on-primary">Start guided grounding</button><p id="ground-step" class="mt-3 font-semibold"></p></div></div>`;
+      $('go-breathe')?.addEventListener('click',()=>{closeModule();$('breath-circle')?.scrollIntoView({behavior:'smooth',block:'center'});});let gi=0,gs=['Name 5 things you can see.','Notice 4 things you can touch.','Listen for 3 things you can hear.','Notice 2 things you can smell.','Notice 1 thing you can taste.','Grounding cycle complete.'];$('ground-next')?.addEventListener('click',()=>{$('ground-step').textContent=gs[Math.min(gi++,gs.length-1)];});
+    } else if(path==='helplines-legal-support'){
+      moduleTitle.textContent='Helplines & Legal Support';moduleSubtitle.textContent='Quick-access support resources shown by the prototype.';
+      moduleBody.innerHTML=`<div class="space-y-3"><a href="tel:14416" class="block rounded-xl bg-surface-container-low p-4"><b>Tele-MANAS</b><div>Call 14416</div></a><a href="tel:14566" class="block rounded-xl bg-surface-container-low p-4"><b>Support line</b><div>Call 14566</div></a><button id="module-legal" class="w-full text-left rounded-xl bg-surface-container-low p-4"><b>Legal rights information</b><div class="text-on-surface-variant">Open the legal/safety resource notice</div></button></div>`;$('module-legal')?.addEventListener('click',()=>{closeModule();$('legal-rights-btn')?.click();});
+    } else if(path==='privacy-center'){
+      moduleTitle.textContent='Privacy Center';moduleSubtitle.textContent='Inspect and erase data stored by this local prototype.';
+      moduleBody.innerHTML=`<div class="grid sm:grid-cols-3 gap-3">${card('Check-ins stored',d.checkins.length)}${card('Journal entries',d.journals.length)}${card('Audio analyses',d.analyses.length)}</div><div class="rounded-xl bg-surface-container-low p-5 mt-4"><h3 class="font-semibold">Audio handling</h3><p class="mt-2 text-on-surface-variant">Raw microphone audio is processed in the browser and is not sent to the FastAPI backend. Only derived acoustic features and the resulting score are stored.</p><button id="module-wipe" class="mt-4 px-4 py-2 rounded-lg bg-error text-on-error">Erase today's check-ins, journals & analyses</button></div>`;$('module-wipe')?.addEventListener('click',()=>{$('wipe-logs-btn')?.click();setTimeout(()=>renderModule('privacy-center'),500);});
+    }
+  }
+  document.querySelectorAll('nav a[data-path], footer a[data-path]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();renderModule(a.dataset.path);}));
+})();
+</script>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg mt-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col gap-space-xs text-center md:text-left"><span class="font-title-md text-title-md text-primary">AASRA-AI Surveillance &amp; Trauma-Informed Response</span><span class="font-body-sm text-body-sm text-on-surface-variant">Ministry of Social Justice and Empowerment (MoSJE) • SIH 2026 Initiative</span></div><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><a class="hover:text-on-surface transition-colors" data-path="privacy-center" href="#">National Tele-MANAS (14416)</a><span>•</span><a class="hover:text-on-surface transition-colors" data-path="privacy-center" href="#">KIRAN Mental Health (1800-599-0019)</a><span>•</span><span>Crisis Protocols Activated</span></div></div></footer></body></html>

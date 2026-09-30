@@ -1,0 +1,17 @@
+Actor-disjoint split: train actors 01-18, test actors 19-24
+Accuracy: 0.5139
+
+              precision    recall  f1-score   support
+
+       angry      0.593     0.729     0.654        48
+        calm      0.719     0.479     0.575        48
+     disgust      0.456     0.542     0.495        48
+     fearful      0.583     0.438     0.500        48
+       happy      0.415     0.354     0.382        48
+     neutral      0.379     0.458     0.415        24
+         sad      0.396     0.438     0.416        48
+   surprised      0.585     0.646     0.614        48
+
+    accuracy                          0.514       360
+   macro avg      0.516     0.510     0.506       360
+weighted avg      0.525     0.514     0.512       360
